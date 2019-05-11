@@ -9,19 +9,15 @@ const cities = [];
 // the data that comes back, but doesnt know what kind of data it is yet
 // must convert the raw data into JSON
 fetch(endpoint)
-  .then(function(res) {
-    // returns another promise
-    return res.json();
-  })
-  .then(function(data) {
-    cities.push(...data);
-    // data is an array of 1000 items, so push will push an array of 1000 items into an empty array
-    // result will be an array within an array 
-    // to avoid this, use es6's spread to spread into the push method
-  });
+// returns another promise
+  .then(res => res.json())
+  .then(data => cities.push(...data));
+// data is an array of 1000 items, so push will push an array of 1000 items into an empty array
+// result will be an array within an array 
+// to avoid this, use es6's spread to spread into the push method
 
 function findMatches(wordToMatch, citiesArray) {
-  return citiesArray.filter(function(place) {
+  return citiesArray.filter(place => {
     // need to figure out if the city or state matches what was searched
 
     // g is for global, looks through entire string
@@ -53,4 +49,4 @@ function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
-search.addEventListener('input', e => e.target.value === '' ? suggestions.innerHTML = '' : displayMatches(e)); 
+search.addEventListener('input', e => e.target.value === '' ? suggestions.innerHTML = `<li>Filter for a City or State</li>` : displayMatches(e)); 
