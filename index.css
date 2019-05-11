@@ -2,6 +2,14 @@ body {
   box-sizing: border-box;
   margin: 0;
   text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background: #f1f1ed;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  padding-top: 40px;
 }
 
 .highlight {
@@ -18,4 +26,31 @@ ul, li {
 
 li {
   margin-top: 20px;
+}
+
+input.search {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  border: 4px solid #F7F7F7;
+  width: 450px;
+  position: relative;
+  top: 50px;
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+.suggestions {
+  margin-top: 100px;
+}
+
+.suggestions li {
+  background: white;
+  list-style: none;
+  border-bottom: 1px solid #D8D8D8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+  margin: 0;
+  padding: 20px;
+  transition: background 0.2s;
+  display: flex;
+  justify-content: space-between;
 }
