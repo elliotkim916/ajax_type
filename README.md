@@ -1,4 +1,4 @@
-# **USA Population Finder**
+# **US Cities Population Finder**
 Type in any US city and see its population!
 
 ## **Live Demo**
