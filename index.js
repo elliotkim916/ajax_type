@@ -49,4 +49,5 @@ function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
-search.addEventListener('input', e => e.target.value === '' ? suggestions.innerHTML = `<li>Filter for a City or State</li>` : displayMatches(e)); 
+search.focus();
+search.addEventListener('input', e => e.target.value === '' ? suggestions.innerHTML = '' : displayMatches(e)); 
